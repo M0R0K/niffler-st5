@@ -2,7 +2,7 @@ package guru.qa.niffler.jupiter.extension;
 
 
 import guru.qa.niffler.api.CategoryApi;
-import guru.qa.niffler.jupiter.annotation.Category;
+import guru.qa.niffler.jupiter.annotation.GenerateCategory;
 import guru.qa.niffler.model.CategoryJson;
 import okhttp3.OkHttpClient;
 import org.junit.jupiter.api.extension.BeforeEachCallback;
@@ -36,7 +36,7 @@ public class CategoryExtension implements BeforeEachCallback, ParameterResolver 
 
         AnnotationSupport.findAnnotation(
                 extensionContext.getRequiredTestMethod(),
-                Category.class
+                GenerateCategory.class
         ).ifPresent(
                 category -> {
                     CategoryJson categoryJson = new CategoryJson(
