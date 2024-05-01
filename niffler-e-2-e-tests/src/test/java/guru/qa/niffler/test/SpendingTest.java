@@ -42,7 +42,7 @@ public class SpendingTest {
                 .clickSubmitButton();
     }
 
-    @GenerateCategory(category = "Обучение4",
+    @GenerateCategory(category = "Обучение5",
             username = "test")
 
 
